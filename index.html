@@ -1,33 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'/>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'/>
-  <title>Document</title>
-  <script src='js/index.js'></script>
-  <link rel='stylesheet' href='index.css'/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Search</title>
+  <!--  Link to your CSS file-->
+  <link rel="stylesheet" href="index.css">
+  <style>
+    /* Add some basic styles for better presentation */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #searchResults {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .userCard {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <div id='main'>
-
-    <h2>GitHub Search</h2>
-
-    <form id='github-form'>
-      <input id='search' type='text' name='search'>
-      <input type='submit' name='submit'/>
-    </form>
-
-    <div id='github-container'>
-      <ul id='user-list'>
-
-      </ul>
-
-      <ul id='repos-list'>
-
-      </ul>
-    </div>
-
-  </div>
-
+  <h1>GitHub User Search</h1>
+  <form id="searchForm">
+    <label for="searchInput">Search for GitHub users:</label>
+    <input type="text" id="searchInput" required>
+    <button type="submit">Search</button>
+  </form>
+  <div id="searchResults"></div>
+  <div id="userRepos"></div>
+  <script src="index.js"></script>
 </body>
 </html>
